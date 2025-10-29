@@ -23,5 +23,11 @@ fetchButton.addEventListener("click", async function() {
     console.log(images);     // Checking the urls in the array are correct through the console
 
 
-    
+    // Clearing it every time you click the button so it doesn't stack the gifs every time you click
+    gifContainer.innerHTML = "";
+
+    // Displaying the gifs
+    for (let i = 0; i < images.length; i++) {
+        gifContainer.innerHTML += `<img src=${images[i]} class = "col-3 mb-3">`;
+    }
 });
